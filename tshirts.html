@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo HTML Formulaire - vente de t-shirt</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        legend {
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        form p {
+            text-decoration: none;
+            margin: 0px;
+            padding: 0;
+            word-spacing: 21px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="" name="Commande">
+            <fieldset>
+                <legend>Client</legend>
+                <div>
+                    <label for="NomPrenom">Nom et Prénom: </label>
+                    <input type="text" id="NomPrenom" name="nom" placeholder="NOM et Prénom" pattern="^[A-Z]+[[:space:]]{1}[A-Z]{1}[a-z]+$">
+                </div>
+                <div>
+                    <label for="Adresse">Adresse: </label>
+                    <input type="text" id="Adresse" name="adresse">
+                </div>
+                <div>
+                    <label for="CodePostal">Code Postal: </label>
+                    <input type="text" id="CodePostal" name="codepostal" pattern="^[0-9]{5}$">
+                </div>
+                <div>
+                    <label for="Pays">Pays: </label>
+                    <input type="text" id="Pays" name="pays" value="France" readonly>
+                </div>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Commande</legend>
+                <div>
+                    <label for="Modele">Modèle: </label>
+                    <select name="modele" id="Modele">
+                        <option value="road66" selected>Road 66</option>
+                        <option value="road67">Road 67</option>
+                        <option value="road68">Road 68</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="Taille">Taille: </label>
+                    <input type="range" name="taille" id="Taille" min="1" max="4" step="1" list="taille">
+                    <datalist id="taille">
+                        <option value="1" label="S" ></option>
+                        <option value="2" label="M"></option>
+                        <option value="3" label="L"></option>
+                        <option value="4" label="XL"></option>
+                    </datalist>
+                    <br>
+                    <p>&nbsp; S M L XL</p>
+                </div>
+                <div>
+                    <label for="Quantite">Quantité: </label>
+                    <input type="number" name="quantite" id="Quantite" min="1" max="165" step="3">
+                </div>
+            </fieldset>
+            <br>
+            <button type="submit">Commande</button>
+            <button type="reset">Recommencer</button>
+        </form>
+    </main>
+</body>
+
+</html>
